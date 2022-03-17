@@ -2,3 +2,23 @@
     margin: 0;
     padding: 0;
 }
+header{
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+}
+
+.container0{
+    display:  grid;      
+}
+.container1{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    background-image: url("../img/Nintendo_Template.png");  
+    background-size: cover;  
+    background-position: center center;
+    background-repeat: no-repeat;
+    place-self: center;
+    width: 90vh;
+    height: 90vh;
+}
