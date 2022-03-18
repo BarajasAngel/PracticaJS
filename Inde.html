@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokédex</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="shortcut icon" href="./img/icon/ball.png" type="image/x-icon">    
+    <link rel="shortcut icon" href="./img/icon/ball.png" type="image/x-icon">     
 </head>
 <body>
     <header>
@@ -16,14 +16,30 @@
         <article class="container0">            
             <section class="container1">
                 <div class="screen0">
-                    <section>                              
+                    <section class="item-titulo">
+                        POKÉMON INFO
+                    </section>
+                    <Section class="item-img">
+                        <span class="namePoke">
+                            <label id="Name" name="Name">Nombre</label>
+                        </span>
+                        <img src="./img/Default.png" alt="PokeImagen" id="PokeImg">
+                    </Section>
+                    <section class="item-info">
+                        <span id="Numero">No.:           </span>
+                        <span id="Nombre">NAME:          </span>
+                        <span id="Tipo">TYPE:            </span>
+                        <span id="Altura">HEIGHT:        </span>
+                        <span id="Peso">WEIGHT:          </span>
+                        <span id="Movimiento">MOVEMENT:  </span>
                     </section>
                 </div>
                 <div class="screen1">
-                    <form class="form-pokemon">
+                    <span class="form-pokemon">
                         <label for="pokemon">Pokémon:</label>
-                        <input type="text" name="pokemon" class="input-pokemon" placeholder="Coloca el nombre aquí">
-                    </form>
+                        <input type="text" name="pokemon" class="input-pokemon" placeholder="Coloca el nombre aquí" id="pokeName" name="pokeName">
+                        <button onclick="fetchPokemon()" class="button">Mostrar Pokémon</button>
+                    </span>
                 </div>
             </section>                        
         </article>
@@ -37,6 +53,7 @@
                 </span>
             </section>
         </article>
+        <script src="./js/pokedex.js"></script>   
     </footer>    
 </body>
 </html>

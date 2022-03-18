@@ -27,6 +27,7 @@ body{
 .container1{    
     display: grid;
     grid-template-columns: repeat(1,1fr);
+    grid-template-rows:285px;
     background-image: url("../img/Nintendo_Template.png");  
     background-size: cover;  
     background-position: center center;
@@ -35,19 +36,50 @@ body{
     width: 90vh;
     height: 90vh;
 }
-.screen0{
-    height: 2vh;
+.screen0{    
     justify-self: center;
     margin-top: 7vh ;
     display: grid;    
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    'Head Head'
+    'Img Asid'        
+    ;
+    grid-template-rows: 25px 200px;
     width: calc(100% - 33vh);
-    height: calc(100% - 7vh);
+    height: calc(100% - 10vh);
     background-color: white;
     border-radius: 8px;
-    background-image: url("../img/boot.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+}
+
+.item-titulo{
+    grid-area: Head;
+    justify-self: center;   
+    align-self: center; 
+    padding: 10px;
+}
+.item-img{
+    grid-area: Img;    
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+}
+.namePoke{
+    margin: 5px 20px;
+}
+#PokeImg{
+    place-self: center;
+    width: calc(100% - 5vh);
+
+}
+.item-info{
+    grid-area: Asid;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;        
+}
+section > span{
+    padding: 5px;
 }
 .screen1{
     height: 2vh;    
@@ -55,7 +87,7 @@ body{
     margin-top: 7vh ;
     display: grid;    
     width: calc(100% - 43vh);
-    height: calc(100% - 13vh);        
+    height: calc(100% - 15vh);        
     cursor: url("../img/icon/lapiz.png"), auto;
     background-color: white;
     border-radius: 8px;
@@ -81,7 +113,17 @@ input{
     cursor: url("../img/icon/lapiz.png"), auto;
     border-radius: 6px;
 }
-
+.button{
+    padding: 7px;
+    border-radius: 6px;
+    border: none;
+    margin-top: 10px ;
+    cursor: url("../img/icon/lapiz.png"), auto;
+}
+.button:hover{
+    color:#FEC906;
+    background-color: #3A53A8;
+}
 
 footer{
     background-color: #b543e23d;  
