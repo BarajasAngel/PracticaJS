@@ -27,7 +27,7 @@ body{
 .container1{    
     display: grid;
     grid-template-columns: repeat(1,1fr);
-    grid-template-rows:285px;
+    grid-template-rows:50%;
     background-image: url("../img/Nintendo_Template.png");  
     background-size: cover;  
     background-position: center center;
@@ -43,20 +43,28 @@ body{
     grid-template-columns: 50% 50%;
     grid-template-areas: 
     'Head Head'
-    'Img Asid'        
-    ;
-    grid-template-rows: 25px 200px;
+    'Img Asid';
+    grid-template-rows: 25px 240px;
     width: calc(100% - 33vh);
-    height: calc(100% - 10vh);
-    background-color: white;
+    height: calc(100% - 11vh);
+    background-image: url("../img/screen1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     border-radius: 8px;
+    -webkit-box-shadow: inset 0px 0px 30px -11px rgba(0,0,0,1);
+    -moz-box-shadow: inset 0px 0px 30px -11px rgba(0,0,0,1);
+    box-shadow: inset 0px 0px 30px -11px rgba(0,0,0,1);
 }
 
 .item-titulo{
     grid-area: Head;
     justify-self: center;   
     align-self: center; 
-    padding: 10px;
+    margin: 20px;
+    padding: 5px;
+    border-radius: 6px;
+    color: white;    
 }
 .item-img{
     grid-area: Img;    
@@ -70,31 +78,35 @@ body{
 #PokeImg{
     place-self: center;
     width: calc(100% - 5vh);
-
 }
 .item-info{
     grid-area: Asid;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;        
+    align-self: center;
+    flex-wrap: wrap;   
+    color: white;     
 }
 section > span{
-    padding: 5px;
+    padding-bottom: 10px;    
+
 }
 .screen1{
     height: 2vh;    
     justify-self: center;
-    margin-top: 7vh ;
+    margin-top: 4.5vh ;
     display: grid;    
     width: calc(100% - 43vh);
-    height: calc(100% - 15vh);        
+    height: calc(100% - 10vh);        
     cursor: url("../img/icon/lapiz.png"), auto;
     background-color: white;
     border-radius: 8px;
     background-image: url("../img/screen1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    -webkit-box-shadow: inset 0px 0px 30px -11px rgba(0,0,0,1);
+    -moz-box-shadow: inset 0px 0px 30px -11px rgba(0,0,0,1);
+    box-shadow: inset 0px 0px 30px -11px rgba(0,0,0,1);
 }
 .form-pokemon{
     display: flex;
@@ -106,6 +118,7 @@ section > span{
 label{
     font-size: large;
     cursor: url("../img/icon/lapiz.png"), auto;
+    color: white;
 }
 input{
     width: calc(100% - 100px);    
@@ -119,10 +132,12 @@ input{
     border: none;
     margin-top: 10px ;
     cursor: url("../img/icon/lapiz.png"), auto;
-}
-.button:hover{
     color:#FEC906;
     background-color: #3A53A8;
+}
+.button:hover{
+    color:#3A53A8;
+    background-color: #FEC906;
 }
 
 footer{
