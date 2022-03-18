@@ -7,7 +7,7 @@
 header{
     display: flex;
     justify-content: center;
-    background-color: #b543e23d;    
+    background-color: ##0000009a;    
 }
 .titulo{         
     height: 85px;
@@ -141,11 +141,14 @@ input{
 }
 
 footer{
-    background-color: #b543e23d;  
+    background-color: #0000009a;  
     padding: 40px;
     display: flex;
     place-content: center;
-    color: black;    
+    color: white;    
+}
+a{
+    color:#FEC906;
 }
 .perfil{
     overflow: hidden;
