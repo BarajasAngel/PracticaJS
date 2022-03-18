@@ -1,17 +1,14 @@
-var i = 0;
 const fetchPokemon = () => {
     const PokeName = document.getElementById("pokeName");
     let pokeInput = PokeName.value.toLowerCase();
     const url = `https://pokeapi.co/api/v2/pokemon/${pokeInput}`;
     fetch(url).then((res) => {
         if(res.status != "200"){            
-            Imprimir("../img/MissingNo.png","000","Glitch","Easter egg","∞","-∞","Bug");
-        }else{
-            i=1;
+            Imprimir("./img/MissingNo.png","000","Glitch","Easter egg","∞","-∞","Bug");
+        }else{            
             return res.json();            
         }        
-    }).then((data) => {         
-        if(i == 1){
+    }).then((data) => {                 
         let pokeImg = data.sprites.front_default;
         let pokeNumero = data.game_indices[3].game_index;        
         let pokeName = data.species.name;
@@ -20,8 +17,7 @@ const fetchPokemon = () => {
         let pokeWeight = data.weight/10;
         let pokeAbilities = data.abilities[0].ability.name;    
         i =  0;
-        Imprimir(pokeImg,pokeNumero,pokeName,pokeType,pokeHeight,pokeWeight,pokeAbilities);                           
-        }
+        Imprimir(pokeImg,pokeNumero,pokeName,pokeType,pokeHeight,pokeWeight,pokeAbilities);                                   
     })
 }
 
